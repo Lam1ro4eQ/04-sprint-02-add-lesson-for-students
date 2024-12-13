@@ -20,8 +20,8 @@ export const DeckItem = ({ deck }: DeckProps) => {
      try {
       await dispatch(deleteDeckTC(deck.id))
      } catch (error) {
-       console.error("Ошибка при выполнении санки:", error);
-     }finally {
+       console.d
+    }finally {
        setIsLoading(false)
      }
 
@@ -32,7 +32,7 @@ export const DeckItem = ({ deck }: DeckProps) => {
     try {
       await dispatch(updateDeckTC({ id: deck.id, name: `${deck.name} updated` }))
     } catch (error) {
-      console.error("Ошибка при выполнении санки:", error);
+      let errorMessage: string
     } finally {
       setIsLoading(false)
     }
